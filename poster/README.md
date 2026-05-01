@@ -1,3 +1,3 @@
 ## 📊 Project Poster
 
-![ICU Poster](ICU_Mortality_Poster.png)
+![ICU Poster](Data_Science_Poster.png)
