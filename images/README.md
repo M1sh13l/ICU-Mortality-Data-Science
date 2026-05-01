@@ -1,28 +1,39 @@
 ## Visualizations
 
-The project notebook contains additional exploratory and evaluation plots. The figures below present the most significant visualizations used to summarize model performance, interpretability, and data characteristics.
+The following figures are used across the project report, presentation, and poster.  
+They highlight key data patterns, clinical insights, and model interpretability.
 
-### Class Distribution
-Shows the original class imbalance before balancing.
+---
 
-![Class Distribution](Class_Distribution.png)
+### 🔹 Class Distribution
+Shows the imbalance between survival and mortality cases in the dataset, which influenced model design and evaluation.
 
-### Methodology Workflow
-Illustrates the full machine learning pipeline used in the project.
+![Class Distribution](images/class_distribution.png)
 
-![Methodology Workflow](Methodology_Workflow.png)
+---
 
-### ROC Curve
-Compares discrimination performance across evaluated models.
+### 🔹 Ventilation vs Mortality
+Illustrates the relationship between ventilation requirement and mortality risk, indicating higher mortality among ventilated patients.
 
-![ROC Curve](roc_curve.png)
+![Ventilation vs Mortality](images/ventilation_vs_mortality.png)
 
-### Confusion Matrix
-Shows final Tuned XGBoost performance at threshold 0.35.
+---
 
-![Confusion Matrix](confusion_matrix.png)
+### 🔹 Age vs Mortality
+Demonstrates how mortality rates increase across age groups, reflecting higher vulnerability in older patients.
 
-### Feature Importance
-Displays the strongest predictors influencing mortality prediction.
+![Age vs Mortality](images/age_vs_mortality.png)
 
-![Feature Importance](feature_importance.png)
+---
+
+### 🔹 Feature Importance
+Highlights the most influential variables in mortality prediction, with clinical indicators such as vasopressor use, ventilation, and sepsis having the strongest impact.
+
+![Feature Importance](images/feature_importance.png)
+
+---
+
+### 🔹 Confusion Matrix
+Shows the final model performance (Tuned XGBoost, threshold = 0.35), emphasizing high recall with some false positives.
+
+![Confusion Matrix](images/confusion_matrix.png)
