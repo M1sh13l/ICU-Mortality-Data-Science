@@ -1,131 +1,180 @@
-# ICU Mortality Prediction using Machine Learning
+# 🏥 ICU Mortality Prediction (Data Science Project)
 
-## Overview
-This project develops a machine learning model to predict ICU patient mortality risk using structured clinical data. The goal is to support early identification of high-risk patients and improve clinical decision-making.
-
----
-
-## Problem Statement
-ICU datasets are highly imbalanced, where survival cases significantly outnumber mortality cases. Traditional models may achieve high accuracy but fail to detect critical high-risk patients.
-
-This project focuses on:
-- Handling class imbalance
-- Prioritizing recall over accuracy
-- Evaluating robustness under noisy data conditions
+A data-driven project for analyzing and predicting ICU mortality risk using clinical data.  
+This work combines exploratory data analysis, feature engineering, and machine learning to identify high-risk patients and support clinical decision-making.
 
 ---
 
-## Dataset
-- 15,000 ICU patient records
-- 24 initial features → reduced to 7 final features
-- Target: `mortality_label` (0 = survived, 1 = died)
+## 📌 Overview
 
-### Final Features:
-- ventilation_required
-- vasopressor_used
-- sepsis_flag
-- apache_score
-- sofa_score
-- comorbidity_score
-- age
+In intensive care units (ICUs), early identification of high-risk patients is critical.  
+Traditional scoring systems like APACHE and SOFA provide useful indicators but may not capture complex relationships in patient data.
+
+This project applies a **data science pipeline** to:
+- Analyze patient data
+- Identify key mortality risk factors
+- Build a predictive model for early risk detection
 
 ---
 
-## Methodology
+## 🎯 Objectives
 
-### Phase 1: Data Preparation
-- Data cleaning
-- Missing value handling
-- Feature encoding and scaling
-
-### Phase 2: EDA
-- Class distribution analysis
-- Feature distributions
-- Correlation heatmap
-- Outlier detection
-
-### Phase 3: Baseline Models
-Trained 8 classifiers:
-- Logistic Regression
-- Decision Tree
-- Random Forest
-- SVM
-- KNN
-- Naive Bayes
-- Gradient Boosting
-- XGBoost
-
-Used cross-validation for evaluation.
-
-### Phase 4: Model Optimization
-- Feature refinement (22 → 7)
-- Class imbalance handling (training set only)
-- Threshold tuning (0.35, 0.40, 0.45)
-
-### Phase 5: Robustness Testing
-- Introduced 15% label noise
-- Simulates real-world clinical data imperfections
+- Analyze ICU patient data to uncover mortality patterns  
+- Handle class imbalance in real-world healthcare data  
+- Identify the most important clinical predictors  
+- Develop an interpretable and recall-focused prediction model  
+- Support data-driven clinical decision-making  
 
 ---
 
-## Results
+## 📂 Dataset
 
-**Best Model:** Tuned XGBoost (threshold = 0.35)
+- **15,000 ICU patient records**
+- **24 clinical features → reduced to 7 key predictors**
+- Target:  
+  - `0 = Survived`  
+  - `1 = Died`
 
-| Metric | Value |
-|------|------|
-| Accuracy | 58.0% |
-| Precision | 55.0% |
-| Recall | 88.45% |
-| F1-score | 67.83% |
-| ROC-AUC | 64.15% |
+### Key Features:
+- Ventilation required  
+- Vasopressor use  
+- Sepsis flag  
+- APACHE score  
+- SOFA score  
+- Comorbidity score  
+- Age  
 
-### Key Insight
-High recall ensures that most high-risk ICU patients are correctly identified, which is critical in healthcare.
-
----
-
-## Model Interpretation
-Top predictors:
-- vasopressor_used
-- ventilation_required
-- sepsis_flag
-
-These features align with clinical indicators of severe patient conditions.
+⚠️ The dataset is **imbalanced**:
+- Survived: 11,582  
+- Died: 3,418  
 
 ---
 
-## Prototype
-A simple interface allows:
-- Input: patient clinical data
-- Output:
-  - mortality probability
-  - predicted class
-  - risk category
+## 🔍 Methodology
+
+The project follows a structured data science workflow:
+
+1. **Data Preparation**
+   - Cleaning, preprocessing, removing irrelevant features  
+
+2. **Exploratory Data Analysis (EDA)**
+   - Class distribution  
+   - Feature relationships  
+   - Clinical pattern discovery  
+
+3. **Feature Engineering**
+   - Reduced features from 24 → 7  
+   - Selected based on statistical and clinical relevance  
+
+4. **Data Splitting & Balancing**
+   - Train/test split (80/20)  
+   - Random undersampling (training set only)  
+
+5. **Model Development**
+   - Logistic Regression  
+   - Decision Tree  
+   - Random Forest  
+   - SVM  
+   - KNN  
+   - Naive Bayes  
+   - Gradient Boosting  
+   - XGBoost  
+
+6. **Optimization**
+   - Threshold tuning (0.35)  
+   - Focus on improving recall  
+
+7. **Evaluation**
+   - Accuracy, Precision, Recall, F1-score, ROC-AUC  
+   - Confusion Matrix  
 
 ---
 
-## Limitations
-- Moderate ROC-AUC
-- False positives due to recall prioritization
-- Dataset may not represent all ICU populations
+## 📊 Key Results
+
+- **Best Model:** Tuned XGBoost  
+- **Recall:** 88.45% ✅  
+- **F1-score:** 67.83%  
+- **ROC-AUC:** 0.64  
+
+👉 The model prioritizes **recall**, ensuring high-risk patients are correctly identified.
 
 ---
 
-## Future Work
-- Use real hospital data
-- Add time-series features
-- Improve model calibration
-- Apply advanced imbalance techniques (SMOTE)
+## 📈 Key Insights
+
+- Mortality strongly correlates with:
+  - Ventilation requirement  
+  - Vasopressor use  
+  - Sepsis  
+  - Severity scores (APACHE, SOFA)  
+
+- Mortality risk increases with age  
+- Severe class imbalance impacts model behavior  
+- Clinical features are more influential than demographic ones  
 
 ---
 
-## Contributors
-- Mashael Saeed
-- Sarah Elshiaty
-- Seifeldin Elshiaty
+## 📸 Visualizations
+
+### Class Distribution
+![Class Distribution](images/class_distribution.png)
+
+### Feature Importance
+![Feature Importance](images/feature_importance.png)
+
+### Confusion Matrix
+![Confusion Matrix](images/confusion_matrix.png)
 
 ---
 
-## License
-This project is for academic purposes.
+## 🎥 Prototype Demo
+
+👉 [Watch Demo Video](https://drive.google.com/your-link)
+
+---
+
+## 📄 Project Files
+
+- 📓 Notebook: `notebook/ICU_Mortality_Model.ipynb`  
+- 📑 Paper: `paper/report.pdf`  
+- 🖼 Poster: `poster/poster.png`  
+- 📊 Dataset: `data/ICU_Patient_Monitoring_Mortality.csv`  
+
+---
+
+## ⚠️ Limitations
+
+- Moderate ROC-AUC performance (~0.64)  
+- Sensitive to noisy clinical data  
+- Based on a single dataset  
+- No time-series patient data included  
+
+---
+
+## 🚀 Future Work
+
+- Incorporate time-series ICU data  
+- Use larger and more diverse datasets  
+- Explore advanced imbalance handling techniques  
+- Improve model robustness and generalization  
+
+---
+
+## 👥 Authors
+
+- Mashael Saeed  
+- Sarah Elshiathy  
+- Seifeldin Elshiathy  
+
+---
+
+## 🙏 Acknowledgements
+
+This project is based on publicly available ICU datasets and builds upon prior research in healthcare analytics and machine learning.
+
+---
+
+## 📎 License
+
+This project is for academic and educational purposes.
