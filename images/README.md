@@ -8,7 +8,7 @@ They highlight key data patterns, clinical insights, and model interpretability.
 ### 🔹 Class Distribution
 Shows the imbalance between survival and mortality cases in the dataset, which influenced model design and evaluation.
 
-![Class Distribution](class_distribution.png)
+![Class Distribution](Class_Distribution.png)
 
 ---
 
