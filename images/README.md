@@ -26,6 +26,13 @@ Demonstrates how mortality rates increase across age groups, reflecting higher v
 
 ---
 
+### 🔹 Methodology Workflow
+Displays the full data science pipeline used in the project.
+
+![Methodology Workflow](Methodology_Workflow.png)
+
+---
+
 ### 🔹 Feature Importance
 Highlights the most influential variables in mortality prediction, with clinical indicators such as vasopressor use, ventilation, and sepsis having the strongest impact.
 
