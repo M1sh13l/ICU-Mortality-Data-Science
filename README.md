@@ -118,7 +118,7 @@ The project follows a structured data science workflow:
 ## 📸 Visualizations
 
 ### Class Distribution
-![Class Distribution](images/class_distribution.png)
+![Class Distribution](images/Class_Distribution.png)
 
 ### Feature Importance
 ![Feature Importance](images/feature_importance.png)
