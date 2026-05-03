@@ -1,11 +1,11 @@
-# 🏥 ICU Mortality Prediction (Data Science Project)
+# ICU Mortality Prediction (Data Science Project)
 
 A data-driven project for analyzing and predicting ICU mortality risk using clinical data.  
 This work combines exploratory data analysis, feature engineering, and machine learning to identify high-risk patients and support clinical decision-making.
 
 ---
 
-## 📌 Overview
+## Overview
 
 In intensive care units (ICUs), early identification of high-risk patients is critical.  
 Traditional scoring systems like APACHE and SOFA provide useful indicators but may not capture complex relationships in patient data.
@@ -17,7 +17,7 @@ This project applies a **data science pipeline** to:
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 - Analyze ICU patient data to uncover mortality patterns  
 - Handle class imbalance in real-world healthcare data  
@@ -27,7 +27,7 @@ This project applies a **data science pipeline** to:
 
 ---
 
-## 📂 Dataset
+## Dataset
 
 - **15,000 ICU patient records**
 - **24 clinical features → reduced to 7 key predictors**
@@ -44,13 +44,13 @@ This project applies a **data science pipeline** to:
 - Comorbidity score  
 - Age  
 
-⚠️ The dataset is **imbalanced**:
+The dataset is **imbalanced**:
 - Survived: 11,582  
 - Died: 3,418  
 
 ---
 
-## 🔍 Methodology
+## Methodology
 
 The project follows a structured data science workflow:
 
@@ -90,18 +90,18 @@ The project follows a structured data science workflow:
 
 ---
 
-## 📊 Key Results
+## Key Results
 
 - **Best Model:** Tuned XGBoost  
 - **Recall:** 88.45% ✅  
 - **F1-score:** 67.83%  
 - **ROC-AUC:** 0.64  
 
-👉 The model prioritizes **recall**, ensuring high-risk patients are correctly identified.
+The model prioritizes **recall**, ensuring high-risk patients are correctly identified.
 
 ---
 
-## 📈 Key Insights
+## Key Insights
 
 - Mortality strongly correlates with:
   - Ventilation requirement  
@@ -115,7 +115,7 @@ The project follows a structured data science workflow:
 
 ---
 
-## 📸 Visualizations
+## Visualizations
 
 ### Class Distribution
 ![Class Distribution](images/Class_Distribution.png)
@@ -128,22 +128,22 @@ The project follows a structured data science workflow:
 
 ---
 
-## 🎥 Prototype Demo
+## Prototype Demo
 
-👉 [Watch Demo Video](https://drive.google.com/your-link)
-
----
-
-## 📄 Project Files
-
-- 📓 Notebook: `notebook/ICU_Mortality_Model.ipynb`  
-- 📑 Paper: `paper/report.pdf`  
-- 🖼 Poster: `poster/poster.png`  
-- 📊 Dataset: `data/ICU_Patient_Monitoring_Mortality.csv`  
+[Watch Demo Video](https://drive.google.com/your-link)
 
 ---
 
-## ⚠️ Limitations
+## Project Files
+
+- Notebook: `notebook/ICU_Mortality_Model.ipynb`  
+- Paper: `paper/report.pdf`  
+- Poster: `poster/poster.png`  
+- Dataset: `data/ICU_Patient_Monitoring_Mortality.csv`  
+
+---
+
+## Limitations
 
 - Moderate ROC-AUC performance (~0.64)  
 - Sensitive to noisy clinical data  
@@ -152,7 +152,7 @@ The project follows a structured data science workflow:
 
 ---
 
-## 🚀 Future Work
+## Future Work
 
 - Incorporate time-series ICU data  
 - Use larger and more diverse datasets  
@@ -161,7 +161,7 @@ The project follows a structured data science workflow:
 
 ---
 
-## 👥 Authors
+## Authors
 
 - Mashael Saeed  
 - Sarah Elshiathy  
@@ -169,12 +169,12 @@ The project follows a structured data science workflow:
 
 ---
 
-## 🙏 Acknowledgements
+## Acknowledgements
 
 This project is based on publicly available ICU datasets and builds upon prior research in healthcare analytics and machine learning.
 
 ---
 
-## 📎 License
+## License
 
 This project is for academic and educational purposes.
